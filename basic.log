@@ -1,0 +1,361 @@
+2024-08-06 14:07:21 DEBUG this is a debug message
+2024-08-06 14:07:21 INFO this is a info message
+2024-08-06 14:07:21 WARNING this is a warning message
+2024-08-06 14:07:21 ERROR this is a error message
+2024-08-06 14:07:21 CRITICAL this is a critical message
+2024-08-06 14:07:40 DEBUG this is a debug message
+2024-08-06 14:07:40 INFO this is a info message
+2024-08-06 14:07:40 WARNING this is a warning message
+2024-08-06 14:07:40 ERROR this is a error message
+2024-08-06 14:07:40 CRITICAL this is a critical message
+2024-08-06 14:17:09 DEBUG this is a debug message
+2024-08-06 14:17:09 INFO this is a info message
+2024-08-06 14:17:09 WARNING this is a warning message
+2024-08-06 14:17:09 ERROR this is a error message
+2024-08-06 14:17:09 CRITICAL this is a critical message
+2024-08-06 14:19:06 DEBUG this is a debug message
+2024-08-06 14:19:06 INFO this is a info message
+2024-08-06 14:19:06 WARNING this is a warning message
+2024-08-06 14:19:06 ERROR this is a error message
+2024-08-06 14:19:06 CRITICAL this is a critical message
+2024-08-06 14:20:36 INFO Creating user...
+2024-08-06 14:20:36 INFO User successfully created.
+2024-08-10 14:21:17 DEBUG this is a debug message
+2024-08-10 14:21:17 INFO this is a info message
+2024-08-10 14:21:17 WARNING this is a warning message
+2024-08-10 14:21:17 ERROR this is a error message
+2024-08-10 14:21:17 CRITICAL this is a critical message
+2024-08-10 14:21:52 DEBUG this is a debug message
+2024-08-10 14:21:52 INFO this is a info message
+2024-08-10 14:21:52 WARNING this is a warning message
+2024-08-10 14:21:52 ERROR this is a error message
+2024-08-10 14:21:52 CRITICAL this is a critical message
+2024-08-10 14:22:43 DEBUG Calling on_field_start with no data
+2024-08-10 14:22:43 DEBUG Calling on_field_name with data[0:10]
+2024-08-10 14:22:43 DEBUG Calling on_field_data with data[11:19]
+2024-08-10 14:22:43 DEBUG Calling on_field_end with no data
+2024-08-10 14:22:43 DEBUG Calling on_field_start with no data
+2024-08-10 14:22:43 DEBUG Calling on_field_name with data[20:28]
+2024-08-10 14:22:43 DEBUG Calling on_field_data with data[29:37]
+2024-08-10 14:22:43 DEBUG Calling on_field_end with no data
+2024-08-10 14:22:43 DEBUG Calling on_field_start with no data
+2024-08-10 14:22:43 DEBUG Calling on_field_name with data[38:46]
+2024-08-10 14:22:43 DEBUG Calling on_field_data with data[47:55]
+2024-08-10 14:22:43 DEBUG Calling on_field_end with no data
+2024-08-10 14:22:43 DEBUG Calling on_end with no data
+2024-08-10 14:29:24 DEBUG Calling on_field_start with no data
+2024-08-10 14:29:24 DEBUG Calling on_field_name with data[0:10]
+2024-08-10 14:29:24 DEBUG Calling on_field_data with data[11:19]
+2024-08-10 14:29:24 DEBUG Calling on_field_end with no data
+2024-08-10 14:29:24 DEBUG Calling on_field_start with no data
+2024-08-10 14:29:24 DEBUG Calling on_field_name with data[20:28]
+2024-08-10 14:29:24 DEBUG Calling on_field_data with data[29:38]
+2024-08-10 14:29:24 DEBUG Calling on_field_end with no data
+2024-08-10 14:29:24 DEBUG Calling on_field_start with no data
+2024-08-10 14:29:24 DEBUG Calling on_field_name with data[39:47]
+2024-08-10 14:29:24 DEBUG Calling on_field_data with data[48:56]
+2024-08-10 14:29:24 DEBUG Calling on_field_end with no data
+2024-08-10 14:29:24 DEBUG Calling on_end with no data
+2024-08-10 14:29:33 DEBUG Calling on_field_start with no data
+2024-08-10 14:29:33 DEBUG Calling on_field_name with data[0:10]
+2024-08-10 14:29:33 DEBUG Calling on_field_data with data[11:19]
+2024-08-10 14:29:33 DEBUG Calling on_field_end with no data
+2024-08-10 14:29:33 DEBUG Calling on_field_start with no data
+2024-08-10 14:29:33 DEBUG Calling on_field_name with data[20:28]
+2024-08-10 14:29:33 DEBUG Calling on_field_data with data[29:38]
+2024-08-10 14:29:33 DEBUG Calling on_field_end with no data
+2024-08-10 14:29:33 DEBUG Calling on_field_start with no data
+2024-08-10 14:29:33 DEBUG Calling on_field_name with data[39:47]
+2024-08-10 14:29:33 DEBUG Calling on_field_data with data[48:56]
+2024-08-10 14:29:33 DEBUG Calling on_field_end with no data
+2024-08-10 14:29:33 DEBUG Calling on_end with no data
+2024-08-10 14:29:41 DEBUG Calling on_field_start with no data
+2024-08-10 14:29:41 DEBUG Calling on_field_name with data[0:10]
+2024-08-10 14:29:41 DEBUG Calling on_field_data with data[11:19]
+2024-08-10 14:29:41 DEBUG Calling on_field_end with no data
+2024-08-10 14:29:41 DEBUG Calling on_field_start with no data
+2024-08-10 14:29:41 DEBUG Calling on_field_name with data[20:28]
+2024-08-10 14:29:41 DEBUG Calling on_field_data with data[29:38]
+2024-08-10 14:29:41 DEBUG Calling on_field_end with no data
+2024-08-10 14:29:41 DEBUG Calling on_field_start with no data
+2024-08-10 14:29:41 DEBUG Calling on_field_name with data[39:47]
+2024-08-10 14:29:41 DEBUG Calling on_field_data with data[48:57]
+2024-08-10 14:29:41 DEBUG Calling on_field_end with no data
+2024-08-10 14:29:41 DEBUG Calling on_end with no data
+2024-08-10 14:33:25 INFO Creating user...
+2024-08-10 14:33:25 INFO User successfully created.
+2024-08-10 14:33:44 DEBUG Calling on_field_start with no data
+2024-08-10 14:33:44 DEBUG Calling on_field_name with data[0:10]
+2024-08-10 14:33:44 DEBUG Calling on_field_data with data[11:19]
+2024-08-10 14:33:44 DEBUG Calling on_field_end with no data
+2024-08-10 14:33:44 DEBUG Calling on_field_start with no data
+2024-08-10 14:33:44 DEBUG Calling on_field_name with data[20:28]
+2024-08-10 14:33:44 DEBUG Calling on_field_data with data[29:34]
+2024-08-10 14:33:44 DEBUG Calling on_field_end with no data
+2024-08-10 14:33:44 DEBUG Calling on_field_start with no data
+2024-08-10 14:33:44 DEBUG Calling on_field_name with data[35:43]
+2024-08-10 14:33:44 DEBUG Calling on_field_data with data[44:52]
+2024-08-10 14:33:44 DEBUG Calling on_field_end with no data
+2024-08-10 14:33:44 DEBUG Calling on_end with no data
+2024-08-10 15:56:15 DEBUG this is a debug message
+2024-08-10 15:56:15 INFO this is a info message
+2024-08-10 15:56:15 WARNING this is a warning message
+2024-08-10 15:56:15 ERROR this is a error message
+2024-08-10 15:56:15 CRITICAL this is a critical message
+2024-08-10 15:57:58 DEBUG Calling on_field_start with no data
+2024-08-10 15:57:58 DEBUG Calling on_field_name with data[0:10]
+2024-08-10 15:57:58 DEBUG Calling on_field_data with data[11:19]
+2024-08-10 15:57:58 DEBUG Calling on_field_end with no data
+2024-08-10 15:57:58 DEBUG Calling on_field_start with no data
+2024-08-10 15:57:58 DEBUG Calling on_field_name with data[20:28]
+2024-08-10 15:57:58 DEBUG Calling on_field_data with data[29:37]
+2024-08-10 15:57:58 DEBUG Calling on_field_end with no data
+2024-08-10 15:57:58 DEBUG Calling on_field_start with no data
+2024-08-10 15:57:58 DEBUG Calling on_field_name with data[38:46]
+2024-08-10 15:57:58 DEBUG Calling on_field_data with data[47:55]
+2024-08-10 15:57:58 DEBUG Calling on_field_end with no data
+2024-08-10 15:57:58 DEBUG Calling on_end with no data
+2024-08-10 15:58:14 WARNING comment not found
+2024-08-10 15:58:14 INFO movie deleted
+2024-08-10 15:59:09 WARNING comment not found
+2024-08-10 15:59:09 INFO movie deleted
+2024-08-10 16:00:32 WARNING comment not found
+2024-08-10 16:00:32 INFO movie deleted
+2024-08-10 16:01:21 WARNING comment not found
+2024-08-10 16:01:21 INFO movie deleted
+2024-08-10 16:01:49 DEBUG this is a debug message
+2024-08-10 16:01:49 INFO this is a info message
+2024-08-10 16:01:49 WARNING this is a warning message
+2024-08-10 16:01:49 ERROR this is a error message
+2024-08-10 16:01:49 CRITICAL this is a critical message
+2024-08-10 16:03:03 DEBUG Calling on_field_start with no data
+2024-08-10 16:03:03 DEBUG Calling on_field_name with data[0:10]
+2024-08-10 16:03:03 DEBUG Calling on_field_data with data[11:19]
+2024-08-10 16:03:03 DEBUG Calling on_field_end with no data
+2024-08-10 16:03:03 DEBUG Calling on_field_start with no data
+2024-08-10 16:03:03 DEBUG Calling on_field_name with data[20:28]
+2024-08-10 16:03:03 DEBUG Calling on_field_data with data[29:37]
+2024-08-10 16:03:03 DEBUG Calling on_field_end with no data
+2024-08-10 16:03:03 DEBUG Calling on_field_start with no data
+2024-08-10 16:03:03 DEBUG Calling on_field_name with data[38:46]
+2024-08-10 16:03:03 DEBUG Calling on_field_data with data[47:55]
+2024-08-10 16:03:03 DEBUG Calling on_field_end with no data
+2024-08-10 16:03:03 DEBUG Calling on_end with no data
+2024-08-10 16:03:48 WARNING comment not found
+2024-08-10 16:03:48 INFO movie deleted
+2024-08-11 03:59:27 DEBUG this is a debug message
+2024-08-11 03:59:27 INFO this is a info message
+2024-08-11 03:59:27 WARNING this is a warning message
+2024-08-11 03:59:27 ERROR this is a error message
+2024-08-11 03:59:27 CRITICAL this is a critical message
+2024-08-11 04:00:37 DEBUG Calling on_field_start with no data
+2024-08-11 04:00:37 DEBUG Calling on_field_name with data[0:10]
+2024-08-11 04:00:37 DEBUG Calling on_field_data with data[11:19]
+2024-08-11 04:00:37 DEBUG Calling on_field_end with no data
+2024-08-11 04:00:37 DEBUG Calling on_field_start with no data
+2024-08-11 04:00:37 DEBUG Calling on_field_name with data[20:28]
+2024-08-11 04:00:37 DEBUG Calling on_field_data with data[29:37]
+2024-08-11 04:00:37 DEBUG Calling on_field_end with no data
+2024-08-11 04:00:37 DEBUG Calling on_field_start with no data
+2024-08-11 04:00:37 DEBUG Calling on_field_name with data[38:46]
+2024-08-11 04:00:37 DEBUG Calling on_field_data with data[47:55]
+2024-08-11 04:00:37 DEBUG Calling on_field_end with no data
+2024-08-11 04:00:37 DEBUG Calling on_end with no data
+2024-08-11 04:00:56 WARNING movie not found
+2024-08-11 04:01:06 WARNING movie not found
+2024-08-11 04:01:18 WARNING movie not found
+2024-08-11 04:01:49 WARNING movie not found
+2024-08-11 04:45:53 DEBUG this is a debug message
+2024-08-11 04:45:53 INFO this is a info message
+2024-08-11 04:45:53 WARNING this is a warning message
+2024-08-11 04:45:53 ERROR this is a error message
+2024-08-11 04:45:53 CRITICAL this is a critical message
+2024-08-11 05:44:59 DEBUG this is a debug message
+2024-08-11 05:44:59 INFO this is a info message
+2024-08-11 05:44:59 WARNING this is a warning message
+2024-08-11 05:44:59 ERROR this is a error message
+2024-08-11 05:44:59 CRITICAL this is a critical message
+2024-08-11 05:49:26 WARNING movie not found
+2024-08-11 05:49:52 DEBUG Calling on_field_start with no data
+2024-08-11 05:49:52 DEBUG Calling on_field_name with data[0:10]
+2024-08-11 05:49:52 DEBUG Calling on_field_data with data[11:19]
+2024-08-11 05:49:52 DEBUG Calling on_field_end with no data
+2024-08-11 05:49:52 DEBUG Calling on_field_start with no data
+2024-08-11 05:49:52 DEBUG Calling on_field_name with data[20:28]
+2024-08-11 05:49:52 DEBUG Calling on_field_data with data[29:37]
+2024-08-11 05:49:52 DEBUG Calling on_field_end with no data
+2024-08-11 05:49:52 DEBUG Calling on_field_start with no data
+2024-08-11 05:49:52 DEBUG Calling on_field_name with data[38:46]
+2024-08-11 05:49:52 DEBUG Calling on_field_data with data[47:55]
+2024-08-11 05:49:52 DEBUG Calling on_field_end with no data
+2024-08-11 05:49:52 DEBUG Calling on_end with no data
+2024-08-11 05:50:00 WARNING movie not found
+2024-08-11 05:50:15 WARNING movie not found
+2024-08-11 05:50:34 WARNING movie not found
+2024-08-11 05:51:46 DEBUG Calling on_field_start with no data
+2024-08-11 05:51:46 DEBUG Calling on_field_name with data[0:10]
+2024-08-11 05:51:46 DEBUG Calling on_field_data with data[11:19]
+2024-08-11 05:51:46 DEBUG Calling on_field_end with no data
+2024-08-11 05:51:46 DEBUG Calling on_field_start with no data
+2024-08-11 05:51:46 DEBUG Calling on_field_name with data[20:28]
+2024-08-11 05:51:46 DEBUG Calling on_field_data with data[29:34]
+2024-08-11 05:51:46 DEBUG Calling on_field_end with no data
+2024-08-11 05:51:46 DEBUG Calling on_field_start with no data
+2024-08-11 05:51:46 DEBUG Calling on_field_name with data[35:43]
+2024-08-11 05:51:46 DEBUG Calling on_field_data with data[44:52]
+2024-08-11 05:51:46 DEBUG Calling on_field_end with no data
+2024-08-11 05:51:46 DEBUG Calling on_end with no data
+2024-08-11 05:51:55 WARNING movie not found
+2024-08-11 05:53:26 WARNING movie not found
+2024-08-11 05:57:18 DEBUG this is a debug message
+2024-08-11 05:57:18 INFO this is a info message
+2024-08-11 05:57:18 WARNING this is a warning message
+2024-08-11 05:57:18 ERROR this is a error message
+2024-08-11 05:57:18 CRITICAL this is a critical message
+2024-08-11 05:58:00 DEBUG Calling on_field_start with no data
+2024-08-11 05:58:00 DEBUG Calling on_field_name with data[0:10]
+2024-08-11 05:58:00 DEBUG Calling on_field_data with data[11:19]
+2024-08-11 05:58:00 DEBUG Calling on_field_end with no data
+2024-08-11 05:58:00 DEBUG Calling on_field_start with no data
+2024-08-11 05:58:00 DEBUG Calling on_field_name with data[20:28]
+2024-08-11 05:58:00 DEBUG Calling on_field_data with data[29:34]
+2024-08-11 05:58:00 DEBUG Calling on_field_end with no data
+2024-08-11 05:58:00 DEBUG Calling on_field_start with no data
+2024-08-11 05:58:00 DEBUG Calling on_field_name with data[35:43]
+2024-08-11 05:58:00 DEBUG Calling on_field_data with data[44:52]
+2024-08-11 05:58:00 DEBUG Calling on_field_end with no data
+2024-08-11 05:58:00 DEBUG Calling on_end with no data
+2024-08-11 05:58:34 WARNING movie not found
+2024-08-11 05:58:48 WARNING movie not found
+2024-08-11 06:00:19 DEBUG this is a debug message
+2024-08-11 06:00:19 INFO this is a info message
+2024-08-11 06:00:19 WARNING this is a warning message
+2024-08-11 06:00:19 ERROR this is a error message
+2024-08-11 06:00:19 CRITICAL this is a critical message
+2024-08-11 06:00:39 DEBUG Calling on_field_start with no data
+2024-08-11 06:00:39 DEBUG Calling on_field_name with data[0:10]
+2024-08-11 06:00:39 DEBUG Calling on_field_data with data[11:19]
+2024-08-11 06:00:39 DEBUG Calling on_field_end with no data
+2024-08-11 06:00:39 DEBUG Calling on_field_start with no data
+2024-08-11 06:00:39 DEBUG Calling on_field_name with data[20:28]
+2024-08-11 06:00:39 DEBUG Calling on_field_data with data[29:34]
+2024-08-11 06:00:39 DEBUG Calling on_field_end with no data
+2024-08-11 06:00:39 DEBUG Calling on_field_start with no data
+2024-08-11 06:00:39 DEBUG Calling on_field_name with data[35:43]
+2024-08-11 06:00:39 DEBUG Calling on_field_data with data[44:52]
+2024-08-11 06:00:39 DEBUG Calling on_field_end with no data
+2024-08-11 06:00:39 DEBUG Calling on_end with no data
+2024-08-11 06:00:58 WARNING movie not found
+2024-08-11 06:01:07 WARNING movie not found
+2024-08-11 06:01:30 DEBUG Calling on_field_start with no data
+2024-08-11 06:01:30 DEBUG Calling on_field_name with data[0:10]
+2024-08-11 06:01:30 DEBUG Calling on_field_data with data[11:19]
+2024-08-11 06:01:30 DEBUG Calling on_field_end with no data
+2024-08-11 06:01:30 DEBUG Calling on_field_start with no data
+2024-08-11 06:01:30 DEBUG Calling on_field_name with data[20:28]
+2024-08-11 06:01:30 DEBUG Calling on_field_data with data[29:37]
+2024-08-11 06:01:30 DEBUG Calling on_field_end with no data
+2024-08-11 06:01:30 DEBUG Calling on_field_start with no data
+2024-08-11 06:01:30 DEBUG Calling on_field_name with data[38:46]
+2024-08-11 06:01:30 DEBUG Calling on_field_data with data[47:55]
+2024-08-11 06:01:30 DEBUG Calling on_field_end with no data
+2024-08-11 06:01:30 DEBUG Calling on_end with no data
+2024-08-11 06:01:36 WARNING movie not found
+2024-08-11 06:02:34 DEBUG Calling on_field_start with no data
+2024-08-11 06:02:34 DEBUG Calling on_field_name with data[0:10]
+2024-08-11 06:02:34 DEBUG Calling on_field_data with data[11:19]
+2024-08-11 06:02:34 DEBUG Calling on_field_end with no data
+2024-08-11 06:02:34 DEBUG Calling on_field_start with no data
+2024-08-11 06:02:34 DEBUG Calling on_field_name with data[20:28]
+2024-08-11 06:02:34 DEBUG Calling on_field_data with data[29:34]
+2024-08-11 06:02:34 DEBUG Calling on_field_end with no data
+2024-08-11 06:02:34 DEBUG Calling on_field_start with no data
+2024-08-11 06:02:34 DEBUG Calling on_field_name with data[35:43]
+2024-08-11 06:02:34 DEBUG Calling on_field_data with data[44:52]
+2024-08-11 06:02:34 DEBUG Calling on_field_end with no data
+2024-08-11 06:02:34 DEBUG Calling on_end with no data
+2024-08-11 06:02:40 DEBUG Calling on_field_start with no data
+2024-08-11 06:02:40 DEBUG Calling on_field_name with data[0:10]
+2024-08-11 06:02:40 DEBUG Calling on_field_data with data[11:19]
+2024-08-11 06:02:40 DEBUG Calling on_field_end with no data
+2024-08-11 06:02:40 DEBUG Calling on_field_start with no data
+2024-08-11 06:02:40 DEBUG Calling on_field_name with data[20:28]
+2024-08-11 06:02:40 DEBUG Calling on_field_data with data[29:34]
+2024-08-11 06:02:40 DEBUG Calling on_field_end with no data
+2024-08-11 06:02:40 DEBUG Calling on_field_start with no data
+2024-08-11 06:02:40 DEBUG Calling on_field_name with data[35:43]
+2024-08-11 06:02:40 DEBUG Calling on_field_data with data[44:53]
+2024-08-11 06:02:40 DEBUG Calling on_field_end with no data
+2024-08-11 06:02:40 DEBUG Calling on_end with no data
+2024-08-11 06:02:53 WARNING movie not found
+2024-08-11 06:06:35 DEBUG Calling on_field_start with no data
+2024-08-11 06:06:35 DEBUG Calling on_field_name with data[0:10]
+2024-08-11 06:06:35 DEBUG Calling on_field_end with no data
+2024-08-11 06:06:35 DEBUG Calling on_field_start with no data
+2024-08-11 06:06:35 DEBUG Calling on_field_name with data[12:20]
+2024-08-11 06:06:35 DEBUG Calling on_field_data with data[21:26]
+2024-08-11 06:06:35 DEBUG Calling on_field_end with no data
+2024-08-11 06:06:35 DEBUG Calling on_field_start with no data
+2024-08-11 06:06:35 DEBUG Calling on_field_name with data[27:35]
+2024-08-11 06:06:35 DEBUG Calling on_field_data with data[36:45]
+2024-08-11 06:06:35 DEBUG Calling on_field_end with no data
+2024-08-11 06:06:35 DEBUG Calling on_field_start with no data
+2024-08-11 06:06:35 DEBUG Calling on_field_name with data[46:51]
+2024-08-11 06:06:35 DEBUG Calling on_field_end with no data
+2024-08-11 06:06:35 DEBUG Calling on_field_start with no data
+2024-08-11 06:06:35 DEBUG Calling on_field_name with data[53:62]
+2024-08-11 06:06:35 DEBUG Calling on_field_end with no data
+2024-08-11 06:06:35 DEBUG Calling on_field_start with no data
+2024-08-11 06:06:35 DEBUG Calling on_field_name with data[64:77]
+2024-08-11 06:06:35 DEBUG Calling on_field_end with no data
+2024-08-11 06:06:35 DEBUG Calling on_end with no data
+2024-08-11 06:08:08 WARNING movie not found
+2024-08-11 06:09:24 WARNING movie not found
+2024-08-11 06:09:33 WARNING movie not found
+2024-08-11 06:10:06 WARNING movie not found
+2024-08-11 06:22:51 DEBUG this is a debug message
+2024-08-11 06:22:51 INFO this is a info message
+2024-08-11 06:22:51 WARNING this is a warning message
+2024-08-11 06:22:51 ERROR this is a error message
+2024-08-11 06:22:51 CRITICAL this is a critical message
+2024-08-11 06:24:35 DEBUG this is a debug message
+2024-08-11 06:24:35 INFO this is a info message
+2024-08-11 06:24:35 WARNING this is a warning message
+2024-08-11 06:24:35 ERROR this is a error message
+2024-08-11 06:24:35 CRITICAL this is a critical message
+2024-08-11 06:25:45 DEBUG Calling on_field_start with no data
+2024-08-11 06:25:45 DEBUG Calling on_field_name with data[0:10]
+2024-08-11 06:25:45 DEBUG Calling on_field_data with data[11:19]
+2024-08-11 06:25:45 DEBUG Calling on_field_end with no data
+2024-08-11 06:25:45 DEBUG Calling on_field_start with no data
+2024-08-11 06:25:45 DEBUG Calling on_field_name with data[20:28]
+2024-08-11 06:25:45 DEBUG Calling on_field_data with data[29:37]
+2024-08-11 06:25:45 DEBUG Calling on_field_end with no data
+2024-08-11 06:25:45 DEBUG Calling on_field_start with no data
+2024-08-11 06:25:45 DEBUG Calling on_field_name with data[38:46]
+2024-08-11 06:25:45 DEBUG Calling on_field_data with data[47:55]
+2024-08-11 06:25:45 DEBUG Calling on_field_end with no data
+2024-08-11 06:25:45 DEBUG Calling on_end with no data
+2024-08-11 06:26:32 WARNING movie not found
+2024-08-11 06:26:54 DEBUG Calling on_field_start with no data
+2024-08-11 06:26:54 DEBUG Calling on_field_name with data[0:10]
+2024-08-11 06:26:54 DEBUG Calling on_field_end with no data
+2024-08-11 06:26:54 DEBUG Calling on_field_start with no data
+2024-08-11 06:26:54 DEBUG Calling on_field_name with data[12:20]
+2024-08-11 06:26:54 DEBUG Calling on_field_data with data[21:29]
+2024-08-11 06:26:54 DEBUG Calling on_field_end with no data
+2024-08-11 06:26:54 DEBUG Calling on_field_start with no data
+2024-08-11 06:26:54 DEBUG Calling on_field_name with data[30:38]
+2024-08-11 06:26:54 DEBUG Calling on_field_data with data[39:47]
+2024-08-11 06:26:54 DEBUG Calling on_field_end with no data
+2024-08-11 06:26:54 DEBUG Calling on_field_start with no data
+2024-08-11 06:26:54 DEBUG Calling on_field_name with data[48:53]
+2024-08-11 06:26:54 DEBUG Calling on_field_end with no data
+2024-08-11 06:26:54 DEBUG Calling on_field_start with no data
+2024-08-11 06:26:54 DEBUG Calling on_field_name with data[55:64]
+2024-08-11 06:26:54 DEBUG Calling on_field_end with no data
+2024-08-11 06:26:54 DEBUG Calling on_field_start with no data
+2024-08-11 06:26:54 DEBUG Calling on_field_name with data[66:79]
+2024-08-11 06:26:54 DEBUG Calling on_field_end with no data
+2024-08-11 06:26:54 DEBUG Calling on_end with no data
+2024-08-11 06:27:04 WARNING movie not found

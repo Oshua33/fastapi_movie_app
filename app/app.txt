@@ -1,0 +1,60 @@
+movie endpoints
+    title, content, year, rating, publisher 
+
+main file
+# from auth import authenticate_user, create_access_token, get_current_user, hash_password
+# from auth import pwd_context
+
+auth file
+# from . import crud
+# from passlib.context import CryptContext
+
+users
+-- relationship with movie, rating, comment
+login users can crud on movie, rating, comment
+-- 
+movie
+-- relationship with rating, comments
+movie has rating and comment
+
+comment
+--relationship movie,users
+
+rating
+--relationship users,movie
+alembic revision --autogenerate -m "your migration message"
+
+
+alembic
+----   alembic revision --autogenerate -m "your migration message"
+
+
+**** NOTES FOR Alembic Migration AND BACKING UP POSTGRESQL DATABASE***
+3. Backup Data
+Objective: Ensure you have a copy of your data that can be restored in case something goes wrong during migration.
+How To Do It:
+
+Create Backup: Use database tools or commands to create a backup of your database. This can be a SQL dump file or a full database backup.
+Restore If Needed: If the migration fails or causes data loss, you can restore the database from the backup.
+Example Command for PostgreSQL:
+
+bash
+Copy code
+-----     pg_dump your_database_name > backup.sql
+To restore:
+
+bash
+Copy code
+-----   psql your_database_name < backup.sql
+
+alembic 
+reply dbtable
+reply  model
+reponse schema
+reply endpoints
+
+
+
+
+
+
