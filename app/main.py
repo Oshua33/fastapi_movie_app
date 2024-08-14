@@ -221,3 +221,4 @@ app.include_router(user_router)
 app.include_router(movie_router)
 app.include_router(rating_router)
 app.include_router(comments_router)
+
