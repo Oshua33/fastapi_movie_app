@@ -35,8 +35,10 @@ class Movie(Base):
     title = Column(String, nullable=False)
     genre = Column(String, nullable=False)
     publisher = Column(String, nullable=False)
-    # optional rating, not best pratice
+    
+    # this is the average rating of all ratings
     rating = Column(Float, nullable=True)
+    
     year_published = Column(Integer, nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
     user_id = Column(Integer, ForeignKey("users.id"))

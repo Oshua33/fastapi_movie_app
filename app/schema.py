@@ -47,6 +47,7 @@ class MovieUpdate(MovieBase):
 class Movie(MovieBase):
     id: int
     user_id: int
+    # average_rating
     rating: Optional[float]
     
     model_config = ConfigDict(from_attributes=True)
@@ -57,6 +58,8 @@ class MovieResponseModel(BaseModel):
     genre: str
     publisher: str
     year_published: int
+    
+    # average_rating
     rating: Optional[float] = None
     user: UserResponseModel
 
