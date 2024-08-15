@@ -64,6 +64,7 @@ def delete_movie(db: Session, movie_id, user_id: int = None):
     db_delete_movie = get_movie(db, movie_id)
     if not db_delete_movie:
         return None
+
     
     db.delete(db_delete_movie)
     db.commit()
@@ -208,7 +209,7 @@ def get_reply_by_id(db: Session, reply_id: int):
 
 
 # delete a comment
-def delete_comment(db: Session, comment_id):
+def delete_comment(db: Session, comment_id: int, current_user: int = None):
     db_delete_comment = get_comment_by_id(db, comment_id=comment_id)
     if not db_delete_comment:
         return None
@@ -219,10 +220,11 @@ def delete_comment(db: Session, comment_id):
 
 
 # delete reply
-def delete_reply(db: Session, reply_id):
+def delete_reply(db: Session, reply_id: int, current_user: int = None):
     db_delete_reply = get_reply_by_id(db, reply_id=reply_id)
     if not db_delete_reply:
-        return None
+        raise HTTPException(status_code=404, detail="reply not found")
+        # return None
     
     db.delete(db_delete_reply)
     db.commit()

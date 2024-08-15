@@ -1,5 +1,5 @@
 from typing import Optional, List
-from pydantic import BaseModel, ConfigDict, str
+from pydantic import BaseModel, ConfigDict
 from datetime import datetime
 
 # user schema

@@ -175,7 +175,7 @@ def create_reply(payload: schema.ReplyCreate, comment_id:int, current_user: sche
     db_comment = crud.get_comment_by_id(db, comment_id)
     if not db_comment:
         raise HTTPException(status_code=404, detail="Comment not found")
-    
+    logger.info('Replying comments.....')
     reply = crud.create_reply(db, payload, comment_id, current_user.id)
     db_comment.replies.append(reply)
     db.add(db_comment)
@@ -204,12 +204,12 @@ def delete_comment(comment_id: int, db: Session = Depends(get_db), current_user:
     return {'message': 'comment deleted successfuly'}
 
 # reply delete
-@comments_router.delete('/{reply_id}')
+@comments_router.delete('/replies/{reply_id}/')
 def delete_reply(reply_id: int, db: Session = Depends(get_db), current_user: schema.User = Depends(get_current_user)):
-    reply = crud.get_reply_by_id(db, reply_id)
-    logger.warning('reply not found')
+    reply = crud.get_reply_by_id(db, reply_id=reply_id)
     if not reply:
-        raise HTTPException(status_code=404, detail="reply not found")
+        logger.warning(f"Reply with id {reply_id} not found.....")
+        raise HTTPException(status_code=404, detail="reply not found...")
     logger.info('reply deleted')
     crud.delete_reply(db, reply_id, current_user.id)
     return {'message': 'reply deleted successfuly'}
