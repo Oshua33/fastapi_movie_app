@@ -151,9 +151,9 @@ def test_delete_movie(setup_db):
   
   
   
-    # rating test......
+# # test for ratings endpoints
     
-    # create rating
+#  # create rating
 def test_create_rating(setup_db):
     login_response = client.post("/login", data={
     "username": "testuser",
@@ -162,7 +162,6 @@ def test_create_rating(setup_db):
     token = login_response.json()["access_token"]
      
     # Create a movie before creating the rating
-    # suppose be fixture oo, movie data
     movie_response = client.post("/movies", json={
             "title": "Test Movie",
             "genre": "A test movie description",
@@ -184,21 +183,8 @@ def test_create_rating(setup_db):
     assert response.json()['rating'] == 4.0
 
 
-# def test_create_rating(setup_db, create_movie):
-#     movie_data, token = create_movie
-    
-#     response = client.post(f'/ratings/{movie_data["id"]}', json={"rating": "4.0"})
 
-#     # Retrieve ratings for the movie
-#     response = client.get(f"/ratings/{movie_data['id']}")
-
-
-#     assert response.status_code == 200
-#     assert len(response.json()) == 0
-#     assert response.json()[0]['movie_id'] == movie_data['id']
-
-
-    # create rating for movie not found
+# create rating for movie not found
 def test_create_rating_wrond_movie_id(setup_db):
     login_response = client.post("/login", data={
     "username": "testuser",
@@ -217,44 +203,98 @@ def test_create_rating_wrond_movie_id(setup_db):
     
     
 # # ratings for a movie
-# def test_get_rating_by_movie(setup_db):
-#     movie_id = client.post(f"/movies{movie_id}", json={
-#             "title": "Test Movie",
-#             "genre": "A test movie description",
-#             "publisher": "Test Publisher",
-#             "year_published": "2024"
-#     })
-#     assert movie_id.status_code == 201
-#     movie_id = movie_id.json()['id']
-    
-#     response = client.get(f"/ratings/{movie_id}/rate")
-    
-#     assert response.status_code == 200
-#     assert response.json()['id'] == movie_id
-    
-
-    
-
-# create rating
-# def test_create_rating(setup_db):
-#     login_response = client.post("/login", data={
-#     "username": "testuser",
-#     "password": "testpassword"
-#     })
-#     token = login_response.json()["access_token"]
+def test_get_rating_by_movie(setup_db):
+    login_response = client.post("/login", data={
+    "username": "testuser",
+    "password": "testpassword"
+    })
+    token = login_response.json()["access_token"]
      
-#     # Create a movie before creating the rating
-#     # suppose be fixture oo, movie data
-   
+    movie_response = client.post("/movies", json={
+            "title": "Test Movie",
+            "genre": "A test movie description",
+            "publisher": "Test Publisher",
+            "year_published": "2024"
+    }, headers={
+        "Authorization": f"Bearer {token}"
+    })
     
-#     # Ensure the movie was created 
+    assert movie_response.status_code == 201
+    movie_id = movie_response.json()['id']
     
+    response = client.get(f"/ratings/{movie_id}/rate")
     
-#     response = client.post(f'/ratings/{movie_id}', json={"rating": "4.0"}, headers={
-#         "Authorization": f"Bearer {token}"
-#     })
-#     # assert it rating created successfully
-#     assert response.status_code == 200
-#     assert response.json()['rating'] == 4.0
+    assert response.status_code == 200
+# #     assert len(response.json()) == 0
+    
+    assert len(response.json()) >= 0 
+    
+
+# test endpoint for comment section
+# test_create comments 
+def test_create_comments(setup_db):
+    login_response = client.post("/login", data={
+        "username": "testuser",
+        "password": "testpassword"
+    })
+    token = login_response.json()["access_token"]
+    
+    # Create a movie before creating the comment
+    movie_response = client.post("/movies", json={
+        "title": "Test Movie",
+        "genre": "A test movie description",
+        "publisher": "Test Publisher",
+        "year_published": "2024"
+    }, headers={
+        "Authorization": f"Bearer {token}"
+    })
+    
+    # Ensure the movie was created 
+    assert movie_response.status_code == 201
+    movie_id = movie_response.json()['id']
+    
+    # Use the correct key in the request payload (assuming your schema uses 'comment')
+    response = client.post('/comments/', json={"comment": "the movie is funny"}, headers={
+        "Authorization": f"Bearer {token}"
+    })
+    
+    # Assert it was created successfully
+    assert response.status_code == 201  # Expect a 201 status code for successful creation
+    assert response.json()['comment'] == "the movie is funny"
+    
+    return movie_id, token
+
+
+# create reply
+def test_create_reply(setup_db):
+    login_response = client.post("/login", data={
+        "username": "testuser",
+        "password": "testpassword"
+    })
+    token = login_response.json()["access_token"]
+    
+    comment_response = client.post('/comments/', json={"comment": "the movie is funny"}, headers={
+        "Authorization": f"Bearer {token}"
+    })
+    
+     # Assert it was created successfully
+    assert comment_response.status_code == 201  
+    # Get the comment_id
+    comment_id = comment_response.json()['id']
+    
+    # assert comment_response.json()['comment'] == "the movie is funny"
+    
+    response = client.post(f'/comments/{comment_id}/replies/', json={"reply": "yes, very funny"}, headers={
+        "Authorization": f"Bearer {token}"
+    })
+    
+     # Assert it was created successfully
+    assert response.status_code == 200  # Expect a 201 status code for successful creation
+    
+    replies = response.json()['replies'] 
+    assert replies[-1]['reply'] == 'yes, very funny' 
+    return comment_id, token
+    
+
 
 

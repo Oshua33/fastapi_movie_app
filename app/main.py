@@ -72,8 +72,8 @@ def get_movies(db: Session = Depends(get_db),  offset: int = 0, limit: int = 10)
 @movie_router.get("/{movie_id}", status_code=status.HTTP_200_OK, response_model=schema.MovieResponseModel)
 def get_movie(movie_id: str, db: Session = Depends(get_db)):
     movie = crud.get_movie(db, movie_id)
-    logger.warning('movie not found')
     if not movie:
+        logger.warning('movie not found')
         raise HTTPException(status_code=404, detail="movie not found")
     return movie
    
@@ -93,8 +93,8 @@ def create_movie(payload: schema.MovieCreate, user: schema.User = Depends(get_cu
 @movie_router.put('/{movie_id}', status_code=status.HTTP_201_CREATED, response_model=schema.MovieResponseModel)
 def update_movie(movie_id: int, payload: schema.MovieUpdate, user: schema.User = Depends(get_current_user), db: Session = Depends(get_db)):
     movie = crud.update_movie(db, movie_id, payload, user.id)
-    logger.warning('movie not found')
     if not movie:
+        logger.warning('movie not found')
         raise HTTPException(status_code=404, detail="Movie not found")
     logger.info('movie updated')
     return movie
@@ -155,7 +155,7 @@ def delete_rating(rating_id: int, db: Session = Depends(get_db), current_user:sc
 
 
 # comments, response_model=schema.CommentResponse
-@comments_router.post('/', response_model=schema.CommentResponse)
+@comments_router.post('/', status_code=status.HTTP_201_CREATED, response_model=schema.CommentResponse)
 def create_comment(comment: schema.CommentCreate, 
                    movie_id: int = 1, 
                    current_user: schema.User = Depends(get_current_user), 
@@ -189,9 +189,16 @@ def create_reply(payload: schema.ReplyCreate, comment_id:int, current_user: sche
 def get_comments(movie_id: int, db: Session = Depends(get_db)):
     db_movie = crud.get_movie(db, movie_id)
     if not db_movie:
+        logger.warning('movie not found.....')
         raise HTTPException(status_code=404, detail="Movie not found")
-    movie = crud.get_comments(db, movie_id)
-    return movie
+    logger.info('getting comments and replys if available...')
+    comments = crud.get_comments(db, movie_id)
+    
+    if not comments:
+        logger.warning('comment not found.....')
+        raise HTTPException(status_code=404, detail="Comment not found")
+        
+    return comments
 
 @comments_router.delete('/{comment_id}')
 def delete_comment(comment_id: int, db: Session = Depends(get_db), current_user: schema.User = Depends(get_current_user)):
