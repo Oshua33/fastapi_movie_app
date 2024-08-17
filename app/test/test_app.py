@@ -1,14 +1,9 @@
 import pytest
 from fastapi.testclient import TestClient
-from app import models
 from app.main import app, get_db
 from sqlalchemy import StaticPool, create_engine
 from sqlalchemy.orm import sessionmaker
 from app.database import Base
-from argon2 import PasswordHasher
-# from app import schema
-from fastapi.security import OAuth2PasswordRequestForm
-from fastapi import status
 
 
 
@@ -64,7 +59,6 @@ def test_login(setup_db):
     assert "access_token" in response.json()
 
 
-# @pytest.fixture
 def test_create_movie(setup_db):
     login_response = client.post("/login", data={
         "username": "testuser",
@@ -80,9 +74,10 @@ def test_create_movie(setup_db):
     }, headers={
         "Authorization": f"Bearer {token}"
     })
-    print(movie_response.json())  # Debugging line to print the error response
+    
+    # Debug line to print the error response
+    print(movie_response.json())  
     assert movie_response.status_code == 201
-    # assert response.json()["title"] == "Test Movie"
     movie_data = movie_response.json()
     
     return movie_data, token
@@ -101,9 +96,9 @@ def test_get_movie_by_id(setup_db):
     
     
     # Test getting a movie that does not exist
-    response = client.get("/movies/9999")  # Using a very high ID that doesn't exist
-    assert response.status_code == 404  # Expecting a 404 Not Found error
-    assert response.json()["detail"] == "movie not found"  # Check the error message
+    response = client.get("/movies/9999")  
+    assert response.status_code == 404  
+    assert response.json()["detail"] == "movie not found"  
     
     
 def test_update_movie_by_id(setup_db):
@@ -127,12 +122,14 @@ def test_update_movie_by_id(setup_db):
     assert response.json()["title"] == "Updated Movie Title"  # Confirm the title is updated
     
     wrong_movie_id = 9999
-        # Test getting a movie that does not exist
+    
+    # Test getting a movie that does not exist
     response = client.get(f"/movies/{wrong_movie_id}")  # Using a very high ID that doesn't exist
     assert response.status_code == 404  # Expecting a 404 Not Found error
     assert response.json()["detail"] == "movie not found"  # Check the error message
     
     
+# test to delete a movie
 def test_delete_movie(setup_db):
         login_response = client.post("/login", data={
         "username": "testuser",
@@ -150,9 +147,7 @@ def test_delete_movie(setup_db):
 
   
   
-  
 # # test for ratings endpoints
-    
 #  # create rating
 def test_create_rating(setup_db):
     login_response = client.post("/login", data={
@@ -225,7 +220,7 @@ def test_get_rating_by_movie(setup_db):
     response = client.get(f"/ratings/{movie_id}/rate")
     
     assert response.status_code == 200
-# #     assert len(response.json()) == 0
+
     
     assert len(response.json()) >= 0 
     
@@ -282,11 +277,8 @@ def test_create_reply(setup_db):
     # Get the comment_id
     comment_id = comment_response.json()['id']
     
-    # assert comment_response.json()['comment'] == "the movie is funny"
     
-    response = client.post(f'/comments/{comment_id}/replies/', json={"reply": "yes, very funny"}, headers={
-        "Authorization": f"Bearer {token}"
-    })
+    response = client.post(f'/comments/{comment_id}/replies/', json={"reply": "yes, very funny"}, headers={"Authorization": f"Bearer {token}"})
     
      # Assert it was created successfully
     assert response.status_code == 200  # Expect a 201 status code for successful creation
@@ -295,6 +287,61 @@ def test_create_reply(setup_db):
     assert replies[-1]['reply'] == 'yes, very funny' 
     return comment_id, token
     
+    
+#  test for getting all comments and replies
+def test_get_comments_by_movie_id(setup_db):
+    login_response = client.post("/login", data={
+    "username": "testuser",
+    "password": "testpassword"
+    })
+    token = login_response.json()["access_token"]
+     
+    movie_response = client.post("/movies", json={
+            "title": "Test Movie",
+            "genre": "A test movie description",
+            "publisher": "Test Publisher",
+            "year_published": "2024"
+    }, headers={
+        "Authorization": f"Bearer {token}"
+    })
+    
+     # Assert it was created successfully
+    assert movie_response.status_code == 201
+    movie_id = movie_response.json()['id']
 
+    response = client.get(f'/comments/{movie_id}/comments')
+    
+    assert response.status_code == 200
+    assert len(response.json()) >= 0 
+    
+    
+# delete comment
+def test_delete_comments(setup_db):
+    login_response = client.post("/login", data={
+        "username": "testuser",
+        "password": "testpassword"
+        })
+    token = login_response.json()["access_token"]
+    
+    comment_id = 1
+    
+    response = client.delete(f"/comments/{comment_id}", headers={"Authorization": f"Bearer {token}" })
+    
+    assert response.status_code == 200
+    assert response.json()['message'] == 'comment deleted successfuly'
 
+# test to delete reply
+def test_delete_reply(setup_db):
+    login_response = client.post("/login", data={
+        "username": "testuser",
+        "password": "testpassword"
+        })
+    token = login_response.json()["access_token"]
+    
+    reply_id = 1
+    
+    response = client.delete(f"/comments/replies/{reply_id}", headers={"Authorization": f"Bearer {token}" })
+    
+    assert response.status_code == 200
+    assert response.json()['message'] == 'reply deleted successfuly'
 
